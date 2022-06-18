@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import study.springcoreprinciple.order.support.FieldLogTrace;
 import study.springcoreprinciple.order.support.LogTrace;
+import study.springcoreprinciple.order.support.ThreadLocalLogTrace;
 
 /**
  * Created by peter on 2022/06/18
@@ -12,6 +13,6 @@ import study.springcoreprinciple.order.support.LogTrace;
 public class LogTraceConfig {
     @Bean
     public LogTrace logTrace() {
-        return new FieldLogTrace();
+        return new ThreadLocalLogTrace();
     }
 }
